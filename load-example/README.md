@@ -21,7 +21,7 @@ Since the ROM doesn't allow loading in command line, I entertained the idea of p
 
 #### Description
 The `RAM.circ` file contains a counter, a RAM component, a clock, and the output of RAM.
-The `main-checker.circ` file uses the `RAM.circ` file as the loaded library, but has additional components such as HEX displays and an output testing whether the RAM output is zero.
+The `main-checker.circ` file uses the `RAM.circ` file as the loaded library, but has additional components such as HEX displays and an output testing whether the RAM output is zero. HEX displays are not shown in the script output and cannot be checked.
 
 #### Result
 Each file was ran with the following commands:
