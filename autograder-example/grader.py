@@ -159,9 +159,9 @@ for student in os.listdir(path_studir):
     # compare output with correct output
     if process.poll() == 0:
         if filecmp.cmp(correctOutputFile, outputFile, shallow=False):
-            resultMessage = f"{student}: Matches the correct answer!"
+            resultMessage = f"{student}:\tMatches the correct answer!\n"
         else:
-            resultMessage = f"{student}: Does not match the correct answer :("
+            resultMessage = f"{student}:\tDoes not match the correct answer :(\n"
         print(resultMessage)
         with open(path_report, 'a+') as report:
             report.write(resultMessage)
