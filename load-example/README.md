@@ -28,12 +28,14 @@ Each file was ran with the following commands:
 `java -jar ../logisim-generic-2.7.1.jar {file-name}.circ -load data.txt -tty table`
 
 The output for the RAM read is the following:
+```
     0000 0000
     0000 0011
     0000 0000
     0001 0100
     1111 0000
     1111 1111
+```
 
 As visible in [`data.txt`](./data.txt), the first address in memory should be 2 and not 0. The output that checks whether the RAM read is zero gives 1 from `main-checker.circ`, implying that the circuit will behave as if the first address is 0 rather than what we load. The hex displays are not included in the circuit output.
 
