@@ -13,6 +13,7 @@ The `rom-example.circ` file contains a simple counter, clock, ROM, and output.
 
 #### Result
 Running `java -jar ../logisim-generic-2.7.1.jar rom-example.circ -tty table -load data.txt` gives the following output:
+
 `No RAM was found for the "-load" option.`
 
 ### RAM.circ and main-checker.circ
@@ -24,7 +25,9 @@ The `main-checker.circ` file uses the `RAM.circ` file as the loaded library, but
 
 #### Result
 Each file was ran with the following commands:
+
 `java -jar ../logisim-generic-2.7.1.jar {file-name}.circ -tty table -load data.txt`
+
 `java -jar ../logisim-generic-2.7.1.jar {file-name}.circ -load data.txt -tty table`
 
 The output for the RAM read is the following:
