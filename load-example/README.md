@@ -13,6 +13,7 @@ The `rom-example.circ` file contains a simple counter, clock, ROM, and output.
 
 #### Result
 Running `java -jar ../logisim-generic-2.7.1.jar rom-example.circ -tty table -load data.txt` gives the following output:
+
 `No RAM was found for the "-load" option.`
 
 ### RAM.circ and main-checker.circ
@@ -20,20 +21,24 @@ Since the ROM doesn't allow loading in command line, I entertained the idea of p
 
 #### Description
 The `RAM.circ` file contains a counter, a RAM component, a clock, and the output of RAM.
-The `main-checker.circ` file uses the `RAM.circ` file as the loaded library, but has additional components such as HEX displays and an output testing whether the RAM output is zero.
+The `main-checker.circ` file uses the `RAM.circ` file as the loaded library, but has additional components such as HEX displays and an output testing whether the RAM output is zero. HEX displays are not shown in the script output and cannot be checked.
 
 #### Result
 Each file was ran with the following commands:
+
 `java -jar ../logisim-generic-2.7.1.jar {file-name}.circ -tty table -load data.txt`
+
 `java -jar ../logisim-generic-2.7.1.jar {file-name}.circ -load data.txt -tty table`
 
 The output for the RAM read is the following:
+```
     0000 0000
     0000 0011
     0000 0000
     0001 0100
     1111 0000
     1111 1111
+```
 
 As visible in [`data.txt`](./data.txt), the first address in memory should be 2 and not 0. The output that checks whether the RAM read is zero gives 1 from `main-checker.circ`, implying that the circuit will behave as if the first address is 0 rather than what we load. The hex displays are not included in the circuit output.
 
