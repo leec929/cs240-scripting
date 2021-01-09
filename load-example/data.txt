@@ -1,5 +1,4 @@
-v2.0 raw
-#
+v2.0 raw # the necessary header. #'s are comments
 02
 03
 00
